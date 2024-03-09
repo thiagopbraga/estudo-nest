@@ -15,12 +15,12 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
-  describe('root', () => {
-    it('should return all users', () => {
-      expect(appController.getAllUsers()).toBe({
-        id: 1,
-        name: 'Thiago Braga',
-        email: 'thiago.braga.tpb@gmail.com',
+  /* create a test to /users/status and that need to return a object with status 200 and message Api is running */
+  describe('users/status', () => {
+    it('should return "API is running!"', () => {
+      expect(appController.getStatus()).toEqual({
+        status: 200,
+        message: 'API is running!',
       });
     });
   });
