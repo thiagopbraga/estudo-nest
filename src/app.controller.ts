@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
 import { PrismaService } from './database/prisma.service';
 import { CreateUserDTO } from './DTOs/UserDTO';
 @Controller('users')
@@ -31,6 +39,23 @@ export class AppController {
   async createUser(@Body() data: CreateUserDTO) {
     const member = await this.prisma.user.create({
       data: data,
+    });
+    return member;
+  }
+
+  @Put(':id')
+  async updateUser(@Param('id') id: string, @Body() data: CreateUserDTO) {
+    const member = await this.prisma.user.update({
+      where: { id: parseInt(id) },
+      data: data,
+    });
+    return member;
+  }
+
+  @Delete(':id')
+  async deleteUser(@Param('id') id: string) {
+    const member = await this.prisma.user.delete({
+      where: { id: parseInt(id) },
     });
     return member;
   }
