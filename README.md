@@ -26,6 +26,11 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+<!-- motivo deste projeto (em ingles) -->
+## Motivation
+
+I'm creating this project to learn more about NestJS and to create a simple API server to be used in my personal projects.
+
 ## Installation
 
 ```bash
