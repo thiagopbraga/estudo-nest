@@ -5,6 +5,14 @@ import { CreateUserDTO } from './DTOs/UserDTO';
 export class AppController {
   constructor(private prisma: PrismaService) {}
 
+  @Get('status')
+  async getStatus() {
+    return {
+      status: 200,
+      message: 'API is running!',
+    };
+  }
+
   @Get()
   async getAllUsers() {
     const allUsers = await this.prisma.user.findMany();
