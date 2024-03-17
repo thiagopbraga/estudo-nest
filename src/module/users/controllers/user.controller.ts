@@ -9,8 +9,8 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { PrismaService } from '../database/prisma.service';
-import { CreateUserDTO } from '../DTOs/UserDTO/create-user-body';
+import { PrismaService } from '../../../database/prisma.service';
+import { CreateUserDTO } from '../../../DTOs/UserDTO/create-user-body';
 import { UpdateUserStatusDTO } from 'src/DTOs/UserDTO/update-status-user-body';
 @Controller('users')
 export class UserController {

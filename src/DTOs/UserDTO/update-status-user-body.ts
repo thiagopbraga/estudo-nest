@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { UserStatus } from 'src/Types/UserTypes';
+import { UserStatus } from 'src/module/users/Types/UserTypes';
 
 export class UpdateUserStatusDTO {
   @IsNotEmpty()

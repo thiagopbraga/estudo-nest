@@ -18,7 +18,7 @@ describe('AppController', () => {
   /* create a test to /users/status and that need to return a object with status 200 and message Api is running */
   describe('users/status', () => {
     it('should return "API is running!"', () => {
-      expect(appController.getStatus()).toEqual({
+      expect(appController.getApiStatus()).toEqual({
         status: 200,
         message: 'API is running!',
       });

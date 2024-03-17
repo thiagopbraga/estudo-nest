@@ -1,4 +1,4 @@
-import { UserStatus } from 'src/Types/UserTypes';
+import { UserStatus } from 'src/module/users/Types/UserTypes';
 
 export class UpdateUserDTO {
   id: number;
